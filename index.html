@@ -3,6 +3,13 @@
 
 <head>
     <style>
+        .half-width {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .center {
             display: flex;
             justify-content: center;
@@ -14,7 +21,12 @@
 
 <body>
     <div class="center">
-        <img src="qr_Code.png" alt="QR Code">
+        <div class="half-width">
+            <img src="qr_Code.png" width="500" height="500" alt="QR Code">
+        </div>
+        <div class="half-width">
+            <img src="marker.png" alt="Marker">
+        </div>
     </div>
 </body>
 
