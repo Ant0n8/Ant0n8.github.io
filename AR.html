@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>AR Experience</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-</head>
-<body>
-    <a-scene embedded arjs="sourceType: webcam;">
-        <a-marker preset="hiro">
-<!--             <a-entity gltf-model="https://cors-anywhere.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/test-364d4.appspot.com/o/sofa.glb?alt=media&token=2106235e-bcf8-419d-87f1-e7330fed9a9b"></a-entity> -->
-            <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-            <a-entity gltf-model="https://api.allorigins.win/raw?url=https://firebasestorage.googleapis.com/v0/b/test-364d4.appspot.com/o/sofa.glb?alt=media&token=2106235e-bcf8-419d-87f1-e7330fed9a9b"></a-entity>
-        </a-marker>
-        <a-entity camera></a-entity>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="https://api.allorigins.win/raw?url=https://firebasestorage.googleapis.com/v0/b/test-364d4.appspot.com/o/sofa.glb?alt=media&token=2106235e-bcf8-419d-87f1-e7330fed9a9b">
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
-</body>
+  </body>
 </html>
