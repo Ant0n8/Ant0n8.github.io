@@ -7,29 +7,15 @@
 </head>
 <body>
     <a-scene embedded arjs="sourceType: webcam;">
-        <a-entity id="sofa" gltf-model="https://api.allorigins.win/raw?url=https://firebasestorage.googleapis.com/v0/b/test-364d4.appspot.com/o/sofa.glb?alt=media&token=2106235e-bcf8-419d-87f1-e7330fed9a9b"></a-entity>
-        <a-entity id="sofa2" gltf-model="https://ant0n8.github.io/sofa2.glb"></a-entity>
+        <a-assets>
+            <a-asset-item id="sofa-model" src="https://api.allorigins.win/raw?url=https://firebasestorage.googleapis.com/v0/b/test-364d4.appspot.com/o/sofa.glb?alt=media&token=2106235e-bcf8-419d-87f1-e7330fed9a9b"></a-asset-item>
+            <a-asset-item id="sofa2-model" src="https://ant0n8.github.io/sofa2.glb"></a-asset-item>
+        </a-assets>
+        <a-marker type="pattern" url="https://raw.githubusercontent.com/AR-js-org/AR.js/master/aframe/examples/pattern-files/pattern-hiro.patt">
+            <a-entity gltf-model="#sofa-model"></a-entity>
+            <a-entity gltf-model="#sofa2-model"></a-entity>
+        </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
-
-    <script>
-        AFRAME.registerComponent('ar-setup', {
-            init: function () {
-                this.el.sceneEl.addEventListener('loaded', this.setupAR.bind(this));
-            },
-            setupAR: function () {
-                const sofaEntity = document.getElementById('sofa');
-                const sofa2Entity = document.getElementById('sofa2');
-
-                const sofaPosition = new THREE.Vector3(0, 0, -1);
-                const sofa2Position = new THREE.Vector3(0, 0, -2);
-
-                sofaEntity.setAttribute('position', sofaPosition);
-                sofa2Entity.setAttribute('position', sofa2Position);
-            }
-        });
-    </script>
-
-    <a-scene ar-setup></a-scene>
 </body>
 </html>
