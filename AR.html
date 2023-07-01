@@ -12,28 +12,28 @@
             <a-asset-item id="sofa2-model" src="https://ant0n8.github.io/sofa2.glb"></a-asset-item>
         </a-assets>
         <a-entity camera></a-entity>
-<!--         <a-entity
-            gltf-model="#sofa-model"
-            scale="0.01 0.01 0.01"
-            position="0 0 0"
-            rotation="0 180 0"
-            arjs-nft
-            arjs-anchor
-        ></a-entity> -->
+        <a-marker preset="hiro">
+<!--             <a-entity
+                gltf-model="#sofa-model"
+                scale="0.01 0.01 0.01"
+                position="0 0 0"
+                rotation="0 180 0"
+                arjs-nft
+                arjs-anchor
+            ></a-entity> -->
+            <a-entity
+                gltf-model="#sofa2-model"
+                scale="0.01 0.01 0.01"
+                position="0 0 0"
+                rotation="0 180 0"
+                arjs-nft
+                arjs-anchor
+            ></a-entity>
+        </a-marker>
         <a-entity
-            gltf-model="#sofa2-model"
-            scale="0.01 0.01 0.01"
-            position="0 0 0"
-            rotation="0 180 0"
-            arjs-nft
-            arjs-anchor
+            camera
+            arjs-camera
         ></a-entity>
-        <a-image
-            src="https://ant0n8.github.io/hiro_marker.png"
-            position="0 0 -10"
-            scale="5 5 5"
-            arjs-nft
-        ></a-image>
     </a-scene>
 </body>
 </html>
